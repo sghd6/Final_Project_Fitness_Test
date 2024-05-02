@@ -6,9 +6,9 @@ import program.main.WorkoutStrategies.IWorkoutStrategy;
 
 public abstract class AbstractUser {
 	protected String userName;
+	protected int age;
 	protected double weight;
 	protected double height;
-	protected int age;
 	protected int pushupGoal;
 	protected int situpGoal;
 	protected int squatGoal;
@@ -24,21 +24,46 @@ public abstract class AbstractUser {
 		
 	}
 	
-	public AbstractUser(String name, int age)
+	/////Baseline Instantiator
+	public AbstractUser(String name, int age, double height, double weight)
 	{
-		name = this.userName;
-		age = this.age;
+		this.userName = name;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		
 	}
 	
 	
-	public IWorkoutStrategy getWorkoutStrategyy() {
-		return workoutStrategy;
-	}
-
-	public void setCookingStrategy(IWorkoutStrategy cookingStrategy) {
-		this.workoutStrategy = cookingStrategy;
+	/////Complete Instantiator (Used for testing)
+	
+	public AbstractUser(String name, int age, double height, double weight, int pushupGoal, int situpGoal, int squatGoal, double runGoal)
+	{
+		this.userName = name;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		this.pushupGoal = pushupGoal;
+		this.situpGoal = situpGoal;
+		this.squatGoal = squatGoal;
+		this.runGoal = runGoal;
+		
 	}
 	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	public int getAge() {
+		return this.age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public double getWeight() {
 		return weight;
 	}
@@ -52,20 +77,7 @@ public abstract class AbstractUser {
 		this.height = height;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
+
 	public int getPushupGoal() {
 		return pushupGoal;
 	}
@@ -97,6 +109,13 @@ public abstract class AbstractUser {
 		this.runGoal = runGoal;
 	}
 	
+	public IWorkoutStrategy getWorkoutStrategyy() {
+		return workoutStrategy;
+	}
+
+	public void setWorkoutStrategy(IWorkoutStrategy workoutStrategy) {
+		this.workoutStrategy = workoutStrategy;
+	}
 	
 	////Calculation/Conversion Methods
 	
@@ -127,7 +146,10 @@ public abstract class AbstractUser {
 		this.weight = kilogram;
 	}
 	
-	
+	public String toString()
+	{
+		return "User [name= " + userName + ", age= "+ age + ",height= " + height + ",weight= " + weight +"]";
+	}
 	
 	
 	

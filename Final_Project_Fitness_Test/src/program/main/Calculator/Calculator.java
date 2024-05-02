@@ -5,9 +5,10 @@ import java.text.DecimalFormat;
 import program.main.UserClasses.AbstractUser;
 
 public class Calculator {
+///The Calculator class performs optional calculations on classes, using a Single Responsibility approach to more advanced class-based calculations.
 	
-	private static final DecimalFormat df = new DecimalFormat("#.##");
-	
+	//private static final DecimalFormat df = new DecimalFormat("#.##");
+//Default Constructor
 	public Calculator() 
 	{
 	}
@@ -41,10 +42,11 @@ public class Calculator {
 	}
 	
 //BMI Calculation for User
-	public double showBMI(AbstractUser user)
+	public int showBMI(AbstractUser user)
 	{
 		double bmi = user.getWeight()/(user.getHeight()*user.getHeight());
-		double val = Double.parseDouble(df.format(bmi));
+		//double val = Double.parseDouble(df.format(bmi));
+		int val = (int)Math.floor(bmi*10000);
 		return val;
 	
 	}
