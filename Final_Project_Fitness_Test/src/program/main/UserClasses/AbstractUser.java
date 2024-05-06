@@ -8,7 +8,7 @@ import program.main.WorkoutStrategies.IWorkoutStrategy;
 public abstract class AbstractUser {
 	protected String userName;
 	protected int age;
-	protected double weight;
+	protected static double weight;
 	protected double height;
 	protected int pushupGoal;
 	protected int situpGoal;
@@ -30,7 +30,7 @@ public abstract class AbstractUser {
 		this.userName = name;
 		this.age = age;
 		this.height = height;
-		this.weight = weight;
+		AbstractUser.weight = weight;
 		
 	}
 	
@@ -40,7 +40,7 @@ public abstract class AbstractUser {
 		this.userName = name;
 		this.age = age;
 		this.height = height;
-		this.weight = weight;
+		AbstractUser.weight = weight;
 		this.pushupGoal = pushupGoal;
 		this.situpGoal = situpGoal;
 		this.squatGoal = squatGoal;
@@ -62,11 +62,11 @@ public abstract class AbstractUser {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public double getWeight() {
+	public static double getWeight() {
 		return weight;
 	}
 	public void setWeight(double weight) {
-		this.weight = weight;
+		AbstractUser.weight = weight;
 	}
 	public double getHeight() {
 		return height;
@@ -179,7 +179,7 @@ public abstract class AbstractUser {
 
 	public String displayUserProfileMetric() 
 	{
-		return "User: " + this.userName + "\nAge: " + this.age + "\nWeight: " + this.weight + "kg\nHeight: " + this.height + "cm";
+		return "User: " + this.userName + "\nAge: " + this.age + "\nWeight: " + AbstractUser.weight + "kg\nHeight: " + this.height + "cm";
 	}
 	
 	public String displayUserProfileImperial()
@@ -195,7 +195,7 @@ public abstract class AbstractUser {
 	
 	//// Track the users Water Intake
 	public void trackWaterIntake(int amount) {
-		this.waterIntake  += amount;
+		AbstractUser.waterIntake  += amount;
 	}
 	
 	public static int getWaterIntake() {
