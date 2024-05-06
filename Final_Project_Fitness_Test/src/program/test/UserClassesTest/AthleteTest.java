@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 class AthleteTest {
 
+	int jumpingjackGoal;
+	int lungeGoal;
+	int pullupGoal;
+	int burpiesGoals;
 	@Test
 	void testAthlete() {
 		fail("Not yet implemented");

@@ -1,6 +1,11 @@
 package program.main.UserClasses;
 
 public class Athlete extends AbstractUser{
+
+	int jumpingjackGoal;
+	int lungeGoal;
+	int pullupGoal;
+	int burpiesGoals;
 	
 	public Athlete() 
 	{

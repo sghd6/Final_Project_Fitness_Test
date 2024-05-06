@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class IntermediateTest {
-
+	int jumpingjackGoal;
+	int lungeGoal;
 	@Test
 	void testIntermediate() {
 		fail("Not yet implemented");
