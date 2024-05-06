@@ -6,10 +6,16 @@ public class RegularStrategy implements IWorkoutStrategy{
 
 	
 	private final static double regularMultiplier = 1;
+	
 	@Override
-	public void choosePlan(AbstractUser user) {
-		// TODO Auto-generated method stub
+	public boolean choosePlan(AbstractUser user) {
+		if (user != null)
+		{
+			user.setTestValue(regularMultiplier);
+			//user.setPushupGoal(user.getPushupGoal()*intenseMultiplier);
+			return true;
+		}
+		return false;
 		
 	}
-
 }
