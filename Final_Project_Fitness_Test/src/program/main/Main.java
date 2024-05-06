@@ -1,6 +1,15 @@
 package program.main;
 
+//Imports
+import program.main.DailyTips.DailyTips;
+
 public class Main {
+	
+	public static void main(String[] args) {
+		//Call for and display one of the daily tips
+		DailyTips dailyTips = new DailyTips();
+		dailyTips.displayDailyTip();
+	}
 	// function to check whether a number is prime 
     public static boolean isPrime(long n) 
     { 
