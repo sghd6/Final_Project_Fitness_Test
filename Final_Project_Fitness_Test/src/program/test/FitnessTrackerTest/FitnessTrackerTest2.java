@@ -11,8 +11,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-import program.main.FitnessTracker.FitnessTracker;
-import program.main.FitnessTracker.GoalType;
+import program.main.FitnessTracker.*;
+//import program.main.FitnessTracker.GoalType;
 
 class FitnessTrackerTest2 {
 
@@ -31,6 +31,7 @@ class FitnessTrackerTest2 {
 
 	    @Test
 	    public void testSetAndGetGoal() {
+	    	tracker = new FitnessTracker();
 	        // Test setting a new goal
 	        Date deadline = new Date(System.currentTimeMillis() + 86400000); // Deadline one day from now
 	        assertTrue("Goal should be set successfully", tracker.setFitnessGoal("Alice", FitnessTracker.GoalType.PUSHUPS, 100, deadline));
@@ -43,6 +44,7 @@ class FitnessTrackerTest2 {
 
 	    @Test
 	    public void testUpdateProgress() {
+	    	 tracker = new FitnessTracker();
 	        // Assuming the goal ID is 1 and it's already set for "Alice"
 	        assertTrue("Progress should be updated successfully", tracker.updateProgress("Alice", 1, 50));
 
@@ -53,10 +55,11 @@ class FitnessTrackerTest2 {
 //
 	    @Test
 	    public void testSaveAndLoad() {
+	    	tracker = new FitnessTracker();
 	        tracker.loadData();  // Make sure this starts with a known clean state
 	        int initialGoalsCount = tracker.getUserGoalsSize("Alice");
-	        tracker.setFitnessGoal("Alice", GoalType.RUN, 10, new Date(System.currentTimeMillis() + 86400000));
-	        tracker.setFitnessGoal("Alice", GoalType.PUSHUPS, 20, new Date(System.currentTimeMillis() + 86400000));
+	        tracker.setFitnessGoal("Alice", FitnessTracker.GoalType.RUN, 10, new Date(System.currentTimeMillis() + 86400000));
+	        tracker.setFitnessGoal("Alice", FitnessTracker.GoalType.PUSHUPS, 20, new Date(System.currentTimeMillis() + 86400000));
 	        tracker.saveData();
 
 	        // Reset or recreate tracker object to simulate a fresh load
@@ -70,9 +73,12 @@ class FitnessTrackerTest2 {
 
 	    @Test
 	    public void testSerializationIntegrity() {
+	    	
+	    	tracker = new FitnessTracker();
+	  
 	        String userName = "Bob";
 	        int goalId = 1; // Assuming goal ID is 1 for simplicity
-	        GoalType goalType = GoalType.PUSHUPS;
+	        program.main.FitnessTracker.FitnessTracker.GoalType goalType = FitnessTracker.GoalType.PUSHUPS;
 	        double initialProgress = 0;
 	        double updatedProgress = 50; // Simulate updating the progress
 	        Date deadline = new Date(System.currentTimeMillis() + 100000); // Set a future deadline
