@@ -7,7 +7,7 @@ import program.main.UserClasses.AbstractUser;
 public class Calculator {
 ///The Calculator class performs optional calculations on classes, using a Single Responsibility approach to more advanced class-based calculations.
 	
-	//private static final DecimalFormat df = new DecimalFormat("#.##");
+	
 //Default Constructor
 	public Calculator() 
 	{
@@ -45,12 +45,24 @@ public class Calculator {
 	public int showBMI(AbstractUser user)
 	{
 		double bmi = user.getWeight()/(user.getHeight()*user.getHeight());
-		//double val = Double.parseDouble(df.format(bmi));
+
 		int val = (int)Math.floor(bmi*10000);
 		return val;
 	
 	}
 	
+	
+	///This converts Imperial units into Metric Units for input and calculations
+			public void MetricImperialHeightConverter(AbstractUser user, int heightValue, int weightValue) 
+			{
+				
+					double centimeter = heightValue * 2.54;
+					user.setHeight(centimeter);
+					
+					double kilogram = heightValue / 2.2046226218;
+					user.setWeight(kilogram);
+				
+			}
 	
 
 }
