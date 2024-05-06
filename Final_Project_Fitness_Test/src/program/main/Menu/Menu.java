@@ -42,6 +42,7 @@ public class Menu {
 	System.out.println(Tiger.getWorkoutStrategyy());
 	
 	System.out.println(c.showBMI(Tiger));
+	System.out.println(Tiger.diplayUserProfileMetric());
 	
 	
 	

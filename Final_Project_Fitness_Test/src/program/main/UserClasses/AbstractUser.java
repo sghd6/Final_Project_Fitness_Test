@@ -15,10 +15,7 @@ public abstract class AbstractUser {
 	protected double runGoal;
 	protected IWorkoutStrategy workoutStrategy;
 	protected double intensityValue = 1;
-	
-	private static final DecimalFormat df = new DecimalFormat("#.##");
-	
-	
+
 	
 	///Simple helper methods
 	public AbstractUser() {
@@ -35,9 +32,7 @@ public abstract class AbstractUser {
 		
 	}
 	
-	
 	/////Complete Instantiator (Used for testing)
-	
 	public AbstractUser(String name, int age, double height, double weight, int pushupGoal, int situpGoal, int squatGoal, double runGoal)
 	{
 		this.userName = name;
@@ -126,8 +121,7 @@ public abstract class AbstractUser {
 		return intensityValue;
 	}
 	
-
-public String goalProgress(int pushupInput, int situpInput, int squatInput, int runInput) {
+	public String goalProgress(int pushupInput, int situpInput, int squatInput, int runInput) {
 		
 		String pushupCompareString = "";
 		String situpCompareString = "";
@@ -181,13 +175,13 @@ public String goalProgress(int pushupInput, int situpInput, int squatInput, int 
 	}
 
 
+	public String diplayUserProfileMetric() 
+	{
+		return "User: " + this.userName + "\nAge: " + this.age + "\nWeight: " + this.weight + "kg\nHeight: " + this.height + "cm";
+	}
 	
 	public String toString()
 	{
 		return "User [name= " + userName + ", age= "+ age + ",height= " + height + ",weight= " + weight +"]";
 	}
-	
-	
-	
-
 }
