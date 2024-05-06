@@ -16,6 +16,7 @@ public abstract class AbstractUser {
 	protected double runGoal;
 	protected IWorkoutStrategy workoutStrategy;
 	protected double intensityValue = 1;
+	private static int waterIntake = 0;
 
 	
 	///Simple helper methods
@@ -191,4 +192,16 @@ public abstract class AbstractUser {
 	{
 		return "User [name= " + userName + ", age= "+ age + ",height= " + height + ",weight= " + weight +"]";
 	}
+	
+	//// Track the users Water Intake
+	public void trackWaterIntake(int amount) {
+		this.waterIntake  += amount;
+	}
+	
+	public static int getWaterIntake() {
+		return waterIntake;
+	}
+	
+	public abstract void displayProfileInfo();
+	
 }
