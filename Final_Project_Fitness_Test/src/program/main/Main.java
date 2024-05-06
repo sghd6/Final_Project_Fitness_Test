@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 import program.main.FitnessTracker.GoalType;
 import program.main.FitnessTracker.FitnessTracker;
+import program.main.Calculator.Calculator;
 import program.main.DailyTips.DailyTips;
 
 public class Main {
