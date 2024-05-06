@@ -40,7 +40,12 @@ class CalculatorTest {
 	}
 	@Test
 	 void testMetricToImperialDisplay() {
-		 assertEquals("5ft 0in",t.metricToImperialDisplay(Shelby));
+		 assertEquals("5ft 0in",t.metricToImperialHeightDisplay(Shelby));
 	 }
+	
+	@Test
+	void metricToImperialWeightConverter() {
+		assertEquals("125lbs", t.metricToImperialWeightConverter(Shelby));
+	}
 
 }

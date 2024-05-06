@@ -126,34 +126,7 @@ public abstract class AbstractUser {
 		return intensityValue;
 	}
 	
-	////Calculation/Conversion Methods
-	
 
-	
-	public void setHeightInchToCentimeter(double inches)
-	{
-		double centimeter = inches * 2.54;
-		this.height = centimeter;
-	}
-	
-	
-	public void setHeightCentimeterToInch(double centimeter)
-	{
-		double inch = centimeter / 2.54;
-		this.height = inch;
-	}
-	
-	public void setWeightPoundtoKilogram(double pound)
-	{
-		double kilogram = pound / 2.2046226218;
-		this.weight = kilogram;
-	}
-	
-	public void setWeightKilogramtoPound(double kilogram)
-	{
-		double pound = kilogram / 0.45359237;
-		this.weight = kilogram;
-	}
 	
 	public String toString()
 	{

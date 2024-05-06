@@ -59,21 +59,25 @@ public class Calculator {
 					double centimeter = heightValue * 2.54;
 					user.setHeight(centimeter);
 					
-					double kilogram = heightValue / 2.2046226218;
+					double kilogram = weightValue / 2.2046226218;
 					user.setWeight(kilogram);
 				
 			}
-	///Converts metric units, used for methods, into imperial units for display to the user.
-			public String metricToImperialDisplay(AbstractUser user) {
+	///Converts metric units, used for methods, into imperial units for display height to the user.
+			public String metricToImperialHeightDisplay(AbstractUser user) {
 				
 				double inch = user.getHeight() / 2.54;
-				double weight = user.getWeight() * 2.2046226218;
 				
 				int footOutput = (int) (inch/12);
 				int inchOutput = (int) (inch%footOutput);
 				
 				return footOutput + "ft " + inchOutput + "in";
 			}
-	
+			///Converts metric units, used for methods, into imperial units for display weight to the user.
+			public String metricToImperialWeightConverter(AbstractUser user)
+			{
+				int weight = (int) (user.getWeight() * 2.2046226218);
+				return weight +"lbs";
+			}
 
 }
