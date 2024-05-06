@@ -14,6 +14,7 @@ public abstract class AbstractUser {
 	protected int squatGoal;
 	protected double runGoal;
 	protected IWorkoutStrategy workoutStrategy;
+	protected double intensityValue = 1;
 	
 	private static final DecimalFormat df = new DecimalFormat("#.##");
 	
@@ -115,6 +116,14 @@ public abstract class AbstractUser {
 
 	public void setWorkoutStrategy(IWorkoutStrategy workoutStrategy) {
 		this.workoutStrategy = workoutStrategy;
+	}
+	
+	public void setTestValue(double multiplier){
+		this.intensityValue = multiplier;
+	}
+	
+	public double getTestValue() {
+		return intensityValue;
 	}
 	
 	////Calculation/Conversion Methods

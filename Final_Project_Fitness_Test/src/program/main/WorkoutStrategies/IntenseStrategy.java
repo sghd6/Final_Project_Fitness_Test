@@ -16,6 +16,6 @@ public class IntenseStrategy implements IWorkoutStrategy{
 			return true;
 		}
 		return false;
-		
+	}
 	}
 
