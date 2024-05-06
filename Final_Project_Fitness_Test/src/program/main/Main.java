@@ -2,18 +2,30 @@ package program.main;
 
 //Imports
 import program.main.DailyTips.DailyTips;
-import program.main.UserClasses.*;
+
+
+import program.main.ActivityTracker.*;
 
 public class Main {
 	
 	public static void main(String[] args) {
-		//Call for and display one of the daily tips
-		DailyTips dailyTips = new DailyTips();
-		dailyTips.displayDailyTip();
 		
-		System.out.println("Total Water Intake: " + Beginner.getWaterIntake());
-		System.out.println("Total Water Intake: " + Athlete.getWaterIntake());
-		System.out.println("Total Water Intake: " + Intermediate.getWaterIntake());
+		//Call for and display one of the daily tips
+		/// Needs to be placed at the top of main method show it is always displaying
+		DailyTips dailyTips = new DailyTips();
+		System.out.println();
+		dailyTips.displayDailyTip();
+		System.out.println();
+		
+		
+		//Water Intake
+		
+		//Add an Activity
+		
+		// Calculate Caloriess Burned
+		
+		//Weekly Summary
+		
 	}
 	// function to check whether a number is prime 
     public static boolean isPrime(long n) 
