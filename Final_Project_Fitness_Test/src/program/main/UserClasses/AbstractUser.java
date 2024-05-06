@@ -194,7 +194,7 @@ public abstract class AbstractUser {
 	}
 	
 	//// Track the users Water Intake
-	public void trackWaterIntake(int amount) {
+	public static void trackWaterIntake(double amount) {
 		AbstractUser.waterIntake  += amount;
 	}
 	
