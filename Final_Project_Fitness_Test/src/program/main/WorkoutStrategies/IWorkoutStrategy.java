@@ -5,6 +5,7 @@ import program.main.UserClasses.AbstractUser;
 
 public interface IWorkoutStrategy {
 
-	public void choosePlan(AbstractUser user);
+	public boolean choosePlan(AbstractUser user);
 }
+
 
