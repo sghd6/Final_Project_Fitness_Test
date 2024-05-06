@@ -1,6 +1,20 @@
 package program.main;
 
+//Imports
+import program.main.DailyTips.DailyTips;
+import program.main.UserClasses.*;
+
 public class Main {
+	
+	public static void main(String[] args) {
+		//Call for and display one of the daily tips
+		DailyTips dailyTips = new DailyTips();
+		dailyTips.displayDailyTip();
+		
+		System.out.println("Total Water Intake: " + Beginner.getWaterIntake());
+		System.out.println("Total Water Intake: " + Athlete.getWaterIntake());
+		System.out.println("Total Water Intake: " + Intermediate.getWaterIntake());
+	}
 	// function to check whether a number is prime 
     public static boolean isPrime(long n) 
     { 

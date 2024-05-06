@@ -1,8 +1,5 @@
 package program.main.UserClasses;
 
-import program.main.UserClasses.AbstractUser;
-import program.main.WorkoutStrategies.IWorkoutStrategy;
-
 public class Athlete extends AbstractUser{
 	
 	public Athlete() 
@@ -22,6 +19,13 @@ public class Athlete extends AbstractUser{
 			double runGoal) {
 		super(name, age, height, weight, pushupGoal, situpGoal, squatGoal, runGoal);
 		// TODO Auto-generated constructor stub
+	}
+
+
+	@Override
+	public void displayProfileInfo() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

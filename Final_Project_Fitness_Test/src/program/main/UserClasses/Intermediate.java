@@ -1,9 +1,5 @@
 package program.main.UserClasses;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import program.main.WorkoutStrategies.IWorkoutStrategy;
-
 public class Intermediate extends AbstractUser{
 	
 	public Intermediate() {
@@ -20,6 +16,12 @@ public class Intermediate extends AbstractUser{
 			int squatGoal, double runGoal) {
 		super(name, age, height, weight, pushupGoal, situpGoal, squatGoal, runGoal);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void displayProfileInfo() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
