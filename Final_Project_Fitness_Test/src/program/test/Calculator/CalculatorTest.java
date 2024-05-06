@@ -35,6 +35,12 @@ class CalculatorTest {
 	@Test
 	void testShowBMI() {
 		assertEquals(24,t.showBMI(Shelby));
+		
+////Makes sure 152.4 cm converts to 5ft and 0 inches
 	}
+	@Test
+	 void testMetricToImperialDisplay() {
+		 assertEquals("5ft 0in",t.metricToImperialDisplay(Shelby));
+	 }
 
 }

@@ -63,6 +63,17 @@ public class Calculator {
 					user.setWeight(kilogram);
 				
 			}
+	///Converts metric units, used for methods, into imperial units for display to the user.
+			public String metricToImperialDisplay(AbstractUser user) {
+				
+				double inch = user.getHeight() / 2.54;
+				double weight = user.getWeight() * 2.2046226218;
+				
+				int footOutput = (int) (inch/12);
+				int inchOutput = (int) (inch%footOutput);
+				
+				return footOutput + "ft " + inchOutput + "in";
+			}
 	
 
 }
