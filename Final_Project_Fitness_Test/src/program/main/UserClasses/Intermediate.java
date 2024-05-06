@@ -1,6 +1,11 @@
 package program.main.UserClasses;
 
 public class Intermediate extends AbstractUser{
+
+
+	int jumpingjackGoal;
+	int lungeGoal;
+
 	
 	public Intermediate() {
 		super();
