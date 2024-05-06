@@ -2,6 +2,7 @@ package program.main.UserClasses;
 
 import java.text.DecimalFormat;
 
+import program.main.Calculator.Calculator;
 import program.main.WorkoutStrategies.IWorkoutStrategy;
 
 public abstract class AbstractUser {
@@ -175,9 +176,15 @@ public abstract class AbstractUser {
 	}
 
 
-	public String diplayUserProfileMetric() 
+	public String displayUserProfileMetric() 
 	{
 		return "User: " + this.userName + "\nAge: " + this.age + "\nWeight: " + this.weight + "kg\nHeight: " + this.height + "cm";
+	}
+	
+	public String displayUserProfileImperial()
+	{
+		Calculator c = new Calculator();
+		return "User: " + this.userName + "\nAge: " + this.age + "\nWeight: " + c.metricToImperialWeightConverter(this)  + "\nHeight: " + c.metricToImperialHeightDisplay(this);
 	}
 	
 	public String toString()

@@ -45,7 +45,7 @@ class CalculatorTest {
 	
 	@Test
 	void metricToImperialWeightConverter() {
-		assertEquals("125lbs", t.metricToImperialWeightConverter(Shelby));
+		assertEquals("125lb", t.metricToImperialWeightConverter(Shelby));
 	}
 
 }

@@ -131,11 +131,17 @@ class AbstractUserTest {
 				+ "You still have 9.0 kilometers left."
 				,Kamala.goalProgress(15, -20, 40, 0));
 	}
-		@Test
-		void testDiplayUserProfileMetric() {
-			assertEquals("User: Kamala" + "\nAge: 35" + "\nWeight: 56.8kg" + "\nHeight: 152.4cm", Kamala.diplayUserProfileMetric());
+	@Test
+	void testDiplayUserProfileMetric() {
+		assertEquals("User: Kamala" + "\nAge: 35" + "\nWeight: 56.8kg" + "\nHeight: 152.4cm", Kamala.displayUserProfileMetric());
 			
 		}
+	
+	@Test
+	void testDisplayUserProfileImperial()
+	{
+		assertEquals("User: Kamala" + "\nAge: 35" + "\nWeight: 125lb" + "\nHeight: 5ft 0in", Kamala.displayUserProfileImperial());
+	}
 	
 	
 	@Test

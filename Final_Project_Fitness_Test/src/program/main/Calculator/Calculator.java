@@ -77,7 +77,7 @@ public class Calculator {
 			public String metricToImperialWeightConverter(AbstractUser user)
 			{
 				int weight = (int) (user.getWeight() * 2.2046226218);
-				return weight +"lbs";
+				return weight +"lb";
 			}
 
 }
