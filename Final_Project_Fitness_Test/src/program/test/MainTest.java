@@ -10,7 +10,7 @@ import program.main.Main;
 class MainTest {
 
 	// A JUnit Test class to test 
-	// Utilities Class 
+	// Utilities Class //
 	    
 	    // test 1 for checking the static isPrime method 
 	    // from Utilities class 
