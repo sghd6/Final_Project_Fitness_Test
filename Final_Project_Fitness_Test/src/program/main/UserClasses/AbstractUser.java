@@ -127,6 +127,60 @@ public abstract class AbstractUser {
 	}
 	
 
+public String goalProgress(int pushupInput, int situpInput, int squatInput, int runInput) {
+		
+		String pushupCompareString = "";
+		String situpCompareString = "";
+		String squatCompareString = "";
+		String runCompareString = "";
+	
+		
+		int pushupCompareInt = this.pushupGoal - Math.abs(pushupInput);
+		int situpCompareInt = this.situpGoal - Math.abs(situpInput);
+		int squatCompareInt = this.squatGoal - Math.abs(squatInput);
+		double runCompareDbl = this.runGoal - Math.abs(runInput);
+		
+		if(pushupCompareInt <= 0)
+		{
+			pushupCompareString = "You have met your pushup goal.";
+		}
+		else
+		{
+			pushupCompareString = "You still have " + pushupCompareInt + " pushups left.";
+		}
+		
+		if(situpCompareInt <= 0)
+		{
+			situpCompareString = "You have met your situp goal.";
+		}
+		else
+		{
+			situpCompareString = "You still have " + situpCompareInt + " situps left.";
+		}
+		
+		if(squatCompareInt <= 0)
+		{
+			squatCompareString = "You have met your squat goal.";
+		}
+		else
+		{
+			squatCompareString = "You still have " + squatCompareInt + " squats left";
+		}
+		
+		if(runCompareDbl <= 0)
+		{
+			runCompareString = "You have met your running goal.";
+		}
+		else
+		{
+			runCompareString = "You still have " + runCompareDbl + " kilometers left.";
+		}
+		
+		return pushupCompareString + "\n" + situpCompareString + "\n" + squatCompareString + "\n" + runCompareString;
+		
+	}
+
+
 	
 	public String toString()
 	{

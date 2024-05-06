@@ -124,25 +124,14 @@ class AbstractUserTest {
 	//}
 
 	@Test
-	void testSetHeightInchToCentimeter() {
-		fail("Not yet implemented");
+	void testGoalProgress() {
+		assertEquals("You still have 35 pushups left." + "\n"
+				+ "You still have 10 situps left." + "\n"
+				+ "You have met your squat goal." + "\n"
+				+ "You still have 9.0 kilometers left."
+				,Kamala.goalProgress(15, -20, 40, 0));
 	}
-
-	@Test
-	void testSetHeightCentimeterToInch() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetWeightPoundtoKilogram() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetWeightKilogramtoPound() {
-		fail("Not yet implemented");
-	}
-
+	
 	@Test
 	void testToString() {
 		assertEquals("User [name= Kamala, age= 35,height= 152.4,weight= 56.8]", Kamala.toString());
