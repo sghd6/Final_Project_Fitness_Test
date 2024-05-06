@@ -9,6 +9,7 @@ import program.main.DailyTips.DailyTips;
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static FitnessTracker tracker = new FitnessTracker();
+	private static Calculator calculator = new Calculator();
 
     public static void main(String[] args) {
     	
