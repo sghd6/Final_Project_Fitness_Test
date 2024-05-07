@@ -10,10 +10,7 @@ import program.main.UserClasses.AbstractUser;
 import program.main.ActivityTracker.Activity;
 import program.main.ActivityTracker.ActivityManager;
 import program.main.FitnessTracker.FitnessTracker;
-<<<<<<< HEAD
-=======
 import program.main.Calculator.Calculator;
->>>>>>> d512663db3e86eb3dcfc6871e9e700fac36d1a4e
 import program.main.DailyTips.DailyTips;
 
 public class Main {
