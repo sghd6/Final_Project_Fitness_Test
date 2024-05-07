@@ -64,6 +64,8 @@ public class Main {
     private static void createUser(String userName) {
         System.out.println("New user created: " + userName);
     }
+    
+    
 
     private static void manageGoals(String userName) {
         while (true) {
