@@ -256,36 +256,7 @@ public class Main {
     			break;
     	}
     	
-    	 private static void createUserClass(String username)
-         {
 
-         	int age;
-         	double height;
-         	double weight;
-         	
-         	
-         	System.out.println("Enter your age:");
-             age = scanner.nextInt();
-             
-             System.out.println("Enter your height:");
-             height = scanner.nextDouble();
-             
-             System.out.println("Enter your weight:");
-             weight = scanner.nextDouble();
-             
-             userTest.setName(username);
-             userTest.setAge(age);
-             userTest.setHeight(height);
-             userTest.setWeight(weight);
-             
-             B.displayProfileInfo();
-             	
-           
-         
-             
-             
-         }
-    	
     }
   
 }
