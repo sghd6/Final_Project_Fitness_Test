@@ -7,15 +7,20 @@ import java.time.format.DateTimeParseException;
 import java.util.*;
 import program.main.FitnessTracker.GoalType;
 import program.main.UserClasses.AbstractUser;
-import program.main.FitnessTracker.FitnessTracker;
 import program.main.ActivityTracker.Activity;
 import program.main.ActivityTracker.ActivityManager;
+import program.main.FitnessTracker.FitnessTracker;
+<<<<<<< HEAD
+=======
+import program.main.Calculator.Calculator;
+>>>>>>> d512663db3e86eb3dcfc6871e9e700fac36d1a4e
 import program.main.DailyTips.DailyTips;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static ActivityManager activityManager = new ActivityManager();
     private static FitnessTracker tracker = new FitnessTracker();
+	private static Calculator calculator = new Calculator();
 
     public static void main(String[] args) {
     	
@@ -69,6 +74,8 @@ public class Main {
     private static void createUser(String userName) {
         System.out.println("New user created: " + userName);
     }
+    
+    
 
     private static void manageGoals(String userName) {
         while (true) {

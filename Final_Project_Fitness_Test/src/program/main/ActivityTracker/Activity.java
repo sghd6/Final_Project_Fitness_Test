@@ -10,7 +10,7 @@ public class Activity {
 	private double intensity;
 	private LocalDateTime dateTime;
 	
-	Activity(String activityType, double duration, double intensity, LocalDateTime dateTime) {
+	public Activity(String activityType, double duration, double intensity, LocalDateTime dateTime) {
 		this.activityType = activityType;
 		this.duration = duration;
 		this.intensity = intensity;
