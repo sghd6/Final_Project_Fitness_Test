@@ -202,6 +202,6 @@ public abstract class AbstractUser {
 		return waterIntake;
 	}
 	
-	public abstract void displayProfileInfo();
+	
 	
 }
