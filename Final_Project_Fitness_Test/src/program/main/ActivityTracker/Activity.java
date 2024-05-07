@@ -3,6 +3,8 @@ package program.main.ActivityTracker;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import program.main.UserClasses.AbstractUser;
+
 public class Activity {
 
 	private String activityType;
@@ -48,5 +50,17 @@ public class Activity {
 		// TODO Auto-generated method stub
 		
 	}
+
+    public static double calculateCaloriesBurned() {
+    	
+    	double totalCalories = 0;
+    	
+    	for (Activity activity : ActivityManager.activities) {
+    		double calories = (activity.getDuration() * activity.getIntensity() * AbstractUser.getWeight());
+    		totalCalories += calories;
+    	}
+    	
+    	return totalCalories;
+    }
 	
 }

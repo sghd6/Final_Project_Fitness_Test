@@ -6,11 +6,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
+import program.main.UserClasses.AbstractUser;
+
 public class ActivityManager {
-    private List<Activity> activities;
+    static List<Activity> activities;
 
     public ActivityManager() {
-        this.activities = new ArrayList<>(); // Ensure this is not omitted or overwritten elsewhere
+        ActivityManager.activities = new ArrayList<>(); // Ensure this is not omitted or overwritten elsewhere
     }
 
     public void trackActivity(String activityType, double duration, double intensity) {
@@ -28,6 +30,8 @@ public class ActivityManager {
         }
         return summary.toString();
     }
+    
+     
 
     
 }
