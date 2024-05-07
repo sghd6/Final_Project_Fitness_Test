@@ -1,13 +1,20 @@
 package program.main;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 import program.main.FitnessTracker.GoalType;
+import program.main.UserClasses.AbstractUser;
 import program.main.FitnessTracker.FitnessTracker;
+import program.main.ActivityTracker.Activity;
+import program.main.ActivityTracker.ActivityManager;
 import program.main.DailyTips.DailyTips;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
+    private static ActivityManager activityManager = new ActivityManager();
     private static FitnessTracker tracker = new FitnessTracker();
 
     public static void main(String[] args) {
@@ -26,7 +33,7 @@ public class Main {
         while (runApplication) {
             System.out.println("\nPlease choose one of the following options:");
             System.out.println("1. Login/Create User and Manage Goals");
-            System.out.println("3. Exit");
+            System.out.println("2. Exit");
 
             int mainOption = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
@@ -71,7 +78,7 @@ public class Main {
             System.out.println("3. Update a goal");
             System.out.println("4. Track an activiy");
             System.out.println("5. Generate a weekly activity summary");
-            System.out.println("6. Calculate Calories Burn");
+            System.out.println("6. Calculate Calories Burned");
             System.out.println("7. Track Water Intake");
             System.out.println("8. Return to main menu");
 
@@ -169,11 +176,36 @@ public class Main {
     }
     
     private static void trackActivity(String userName) {
+    	
+    	System.out.println("Enter the type of activity (e.g., Running, Cycling):");
+        String activityType = scanner.nextLine();
+
+        System.out.println("Enter the duration in minutes:");
+        double duration = scanner.nextDouble();
+
+        System.out.println("Enter the intensity (e.g., 1 to 5):");
+        double intensity = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+
+        activityManager.trackActivity(activityType, duration, intensity);
+        System.out.println("Activity logged successfully!");
 		
 	}
     
     private static void generateSummary(String userName) {
     	
+    	System.out.println("Enter the start date for the weekly summary (YYYY-MM-DD):");
+    	
+        String startDateStr = scanner.nextLine();
+        
+        try {
+            LocalDate startDate = LocalDate.parse(startDateStr, DateTimeFormatter.ISO_LOCAL_DATE);
+            String summary = activityManager.generateSummary(startDate);
+            System.out.println("Weekly Activity Summary from " + startDateStr + ":\n" + summary);
+        } catch (DateTimeParseException e) {
+            System.out.println("Invalid date format. Please enter the date in YYYY-MM-DD format.");
+        }
+        
     }
     
     private static void caloriesBurned(String userName) {
@@ -182,6 +214,26 @@ public class Main {
     
     private static void waterIntake(String usserName) {
     	
+    	System.out.println("Please select one of the choices below.");
+    	
+    	System.out.println("1. Track water intake");
+    	System.out.println("2. View current water intake");
+    	System.out.println("3. Exit");
+        
+    	int choice = scanner.nextInt();
+    	
+    	switch (choice) {
+    		case 1:
+    			System.out.println("Enter water intake in ounces.");
+    			double amount = scanner.nextDouble();
+    			AbstractUser.trackWaterIntake(amount);
+    			System.out.print("Water intake logged successfully.");
+    		case 2:
+    			System.out.println("Today's Water Intake = " + AbstractUser.getWaterIntake() + " oz.");
+    		case 3:
+    			break;
+    	}
+    	
     }
-    
+  
 }

@@ -237,5 +237,11 @@ public class FitnessTracker implements Serializable {
         }
     }
 
+	public Object getActivtyManger(String userName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }
 

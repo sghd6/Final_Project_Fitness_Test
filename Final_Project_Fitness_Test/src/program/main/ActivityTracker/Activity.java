@@ -1,6 +1,7 @@
 package program.main.ActivityTracker;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Activity {
 
@@ -31,6 +32,17 @@ public class Activity {
 	public LocalDateTime dateTime() {
 		return dateTime;
 	}
+	
+	public String getFormattedDateTime() {
+        return dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    }
+	
+	public String toString() {
+        return "activityType='" + activityType + '\'' +
+                ", duration=" + String.format("%.2f hours", duration) +
+                ", intensity=" + intensity +
+                ", dateTime=" + dateTime;
+    }
 
 	public void add(Activity activity) {
 		// TODO Auto-generated method stub
