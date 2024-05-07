@@ -189,7 +189,7 @@ public class Main {
 
         System.out.println("Enter the intensity (e.g., 1 to 5):");
         double intensity = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         activityManager.trackActivity(activityType, duration, intensity);
         System.out.println("Activity logged successfully!");
