@@ -7,6 +7,9 @@ import java.time.format.DateTimeParseException;
 import java.util.*;
 import program.main.FitnessTracker.GoalType;
 import program.main.UserClasses.AbstractUser;
+import program.main.UserClasses.Athlete;
+import program.main.UserClasses.Beginner;
+import program.main.UserClasses.Intermediate;
 import program.main.ActivityTracker.Activity;
 import program.main.ActivityTracker.ActivityManager;
 import program.main.FitnessTracker.FitnessTracker;
@@ -18,6 +21,8 @@ public class Main {
     private static ActivityManager activityManager = new ActivityManager();
     private static FitnessTracker tracker = new FitnessTracker();
 	private static Calculator calculator = new Calculator();
+	
+	Beginner userTest = new Beginner();
 
     public static void main(String[] args) {
     	
@@ -73,6 +78,8 @@ public class Main {
     }
     
     
+    
+    
 
     private static void manageGoals(String userName) {
         while (true) {
@@ -84,7 +91,8 @@ public class Main {
             System.out.println("5. Generate a weekly activity summary");
             System.out.println("6. Calculate Calories Burned");
             System.out.println("7. Track Water Intake");
-            System.out.println("8. Return to main menu");
+            System.out.println("8. Enter Health Details");
+            System.out.println("9. Return to main menu");
 
             int userChoice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
@@ -111,7 +119,9 @@ public class Main {
                 case 7:
                 	waterIntake(userName);
                 	break;
-                case 8:
+                case 8: createUserClass(userName);
+                	break;
+                case 9:
                     return; // Return to the main menu
                 default:
                     System.out.println("Invalid option. Please select 1, 2, 3, or 4.");
@@ -237,6 +247,36 @@ public class Main {
     		case 3:
     			break;
     	}
+    	
+    	 private static void createUserClass(String username)
+         {
+
+         	int age;
+         	double height;
+         	double weight;
+         	
+         	
+         	System.out.println("Enter your age:");
+             age = scanner.nextInt();
+             
+             System.out.println("Enter your height:");
+             height = scanner.nextDouble();
+             
+             System.out.println("Enter your weight:");
+             weight = scanner.nextDouble();
+             
+             userTest.setName(username);
+             userTest.setAge(age);
+             userTest.setHeight(height);
+             userTest.setWeight(weight);
+             
+             B.displayProfileInfo();
+             	
+           
+         
+             
+             
+         }
     	
     }
   
