@@ -27,11 +27,6 @@ public class Athlete extends AbstractUser{
 	}
 
 
-	@Override
-	public void displayProfileInfo() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 	

@@ -23,11 +23,7 @@ public class Intermediate extends AbstractUser{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void displayProfileInfo() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	
 
