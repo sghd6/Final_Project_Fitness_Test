@@ -213,7 +213,8 @@ public class Main {
     }
     
     private static void caloriesBurned(String userName) {
-    	
+    	double caloriesBurned = Activity.calculateCaloriesBurned();
+    	System.out.println("You Burned " + caloriesBurned + " this week.");
     }
     
     private static void waterIntake(String usserName) {
