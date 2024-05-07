@@ -83,6 +83,7 @@ public class Main {
 
     private static void manageGoals(String userName) {
         while (true) {
+       	Beginner Default = new Beginner(userName,40,136.5,80.2);
             System.out.println("Welcome, " + userName + "! Select an option:");
             System.out.println("1. Create a new goal");
             System.out.println("2. View my goals");
@@ -91,8 +92,9 @@ public class Main {
             System.out.println("5. Generate a weekly activity summary");
             System.out.println("6. Calculate Calories Burned");
             System.out.println("7. Track Water Intake");
-            System.out.println("8. Enter Health Details");
-            System.out.println("9. Return to main menu");
+            System.out.println("8. Get Health Details");
+            System.out.println("9. Get BMI");
+            System.out.println("10. Return to main menu");
 
             int userChoice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline
@@ -119,9 +121,14 @@ public class Main {
                 case 7:
                 	waterIntake(userName);
                 	break;
-                case 8: createUserClass(userName);
+                case 8:
+                	  System.out.println(Default.displayUserProfileMetric());
                 	break;
                 case 9:
+                	System.out.println(calculator.showBMI(Default));
+                	System.out.println(calculator.bmiRanking(Default));
+                	break;
+                case 10:
                     return; // Return to the main menu
                 default:
                     System.out.println("Invalid option. Please select 1, 2, 3, or 4.");
